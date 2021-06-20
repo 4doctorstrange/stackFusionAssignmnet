@@ -30,7 +30,7 @@ class Form extends Component {
         this.setState({errorEmail:"Error: Invalid Email"})
         count+=1
     }
-    if (this.state.dob.length===0 || (parseInt(this.state.dob.slice(0,4))<2003) ){
+    if (this.state.dob.length===0 || !(parseInt(this.state.dob.slice(0,4))<2003) ){
         this.setState({errorDob:"Error : Invalid Date of birth (User must be 18+)"})
         count+=1
     }
